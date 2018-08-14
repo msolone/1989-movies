@@ -3,13 +3,10 @@ import Movie from './Movie.js'
 import MovieData from './1989-Movies.json'
 
 class MovieList extends Component {
-    // sortByNumber = (a,b) => {
-    //     return a - b
-    // }
+
     render() {
-      let splitDate = MovieData.results[0].release_date.split('-').join('')
-      let newReleaseDate = parseInt(splitDate)
-      console.log(newReleaseDate)
+    // newDate = new Date()
+
       
     return (
       <div>
@@ -23,7 +20,8 @@ class MovieList extends Component {
                     return 0
                 }
             }).map((movie, i) =>
-            {return <Movie title={movie.title} 
+            {return <Movie 
+            title={movie.title} 
             release_date={movie.release_date} 
             poster_path={movie.poster_path} 
             overview={movie.overview} 
